@@ -28,6 +28,33 @@ const projects = [
 
 export const PersonalProjects = () => {
   return (
+    <>
+     <div className="pb-6 text-center">
+            <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-bold">
+              Personal{" "}
+              <span className="relative">
+                <span className="gradient-text">Projects</span>
+                <svg
+                  className="absolute -bottom-2 left-0 w-full"
+                  viewBox="0 0 200 8"
+                  fill="none"
+                >
+                  <path
+                    d="M2 6C50 2 150 2 198 6"
+                    stroke="url(#gradient)"
+                    strokeWidth="3"
+                    strokeLinecap="round"
+                  />
+                  <defs>
+                    <linearGradient id="gradient" x1="0" y1="0" x2="200" y2="0">
+                      <stop stopColor="hsl(var(--primary))" />
+                      <stop offset="1" stopColor="hsl(var(--accent))" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </span>
+            </h2>
+          </div>
     <div className="w-[90%] m-auto grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
       {projects.map((project) => (
         <article
@@ -84,6 +111,7 @@ export const PersonalProjects = () => {
           </div>
         </article>
       ))}
-    </div>
+  </div>
+</>
   );
 };
