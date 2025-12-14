@@ -233,7 +233,6 @@ export function ProjectsSection() {
 
                   {/* Info */}
                   <div className="flex-1 min-w-0">
-                 
                     <h4
                       className={`font-display font-semibold text-lg mb-1 transition-colors ${
                         activeProject === project.id
@@ -277,20 +276,23 @@ export function ProjectsSection() {
       {/* Video Modal */}
       {activeVideo && (
         <div
-          className="fixed inset-0 z-50 bg-background/98 backdrop-blur-2xl flex items-center justify-center p-4 md:p-8"
+          className="fixed inset-0 z-50 bg-background/95 backdrop-blur-xl flex items-center justify-center p-4 md:p-8"
           onClick={() => setActiveVideo(null)}
         >
           <div
             className="relative w-full max-w-6xl aspect-video rounded-3xl overflow-hidden border border-border/50 shadow-2xl shadow-primary/20"
             onClick={(e) => e.stopPropagation()}
           >
+            {/* Close Button */}
             <button
               onClick={() => setActiveVideo(null)}
-              className="absolute -top-16 right-0 flex items-center gap-2 px-4 py-2 rounded-xl bg-secondary/80 hover:bg-primary/20 text-foreground hover:text-primary transition-all border border-border/50"
+              className="absolute top-14 right-2 z-20 w-10 h-10 rounded-full bg-background/80 backdrop-blur-md border border-border/50 flex items-center justify-center text-foreground hover:text-primary hover:bg-primary/10 transition-all"
+              aria-label="Close video"
             >
-              <X size={18} />
-              <span className="text-sm font-medium">Close</span>
+              <X size={22} />
             </button>
+
+            {/* Video */}
             <iframe
               src={activeVideo}
               className="w-full h-full bg-background"

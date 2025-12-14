@@ -32,7 +32,7 @@ export function Header() {
       }`}
     >
       <nav className="container-narrow mx-auto px-6 py-4 flex items-center justify-between">
-         <img src={NameLogo} alt="" className="h-[50px] p-[10px]" />
+         <img src={NameLogo} alt="" className="md:h-[50px] h-[30px] p-[5px] md:p-[10px]" />
 
         {/* Desktop Navigation */}
         <ul className="hidden md:flex items-center gap-1">
